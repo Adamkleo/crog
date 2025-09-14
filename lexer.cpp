@@ -37,7 +37,7 @@ Token Lexer::number() {
 	}
     }
     
-    return Token(TokenType::NUMBER, tokenValue, std::stof(tokenValue));
+    return Token(TokenType::NUMBER, tokenValue, std::stod(tokenValue));
 
 }
 
@@ -97,7 +97,7 @@ bool Lexer::isSymbol(char c) {
 }
 
     
-std::vector<Token> Lexer::tokenize(const std::string& input) {
+std::vector<Token> Lexer::tokenize() {
     std::vector<Token> tokens;
     Token token = get_next_token();
     while (token.get_type() != TokenType::_EOF) {

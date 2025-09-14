@@ -1,0 +1,45 @@
+<expression> ::"=" <term> | <expression> ""+"" <term>
+<term> ::"=" <factor> | <term> ""*"" <factor>
+<factor> ::"=" ""("" <expression> "")"" | <number>
+
+// Entry point to program concsisting of one or more sentences
+<program> ::"=" <sentence> <rest_sentence>
+<rest_sentence> ::"=" <sentence> <rest_sentence> | "λ"
+
+
+<sentence> ::"=" <function_expression>
+
+
+// Function expression, can be a new function or a call to an existing one
+<function_expression> ::= <function_creation> | <function_call>
+
+<function_creation> ::= <function_name> "(" <function_args> ")" "=" <function_body>
+
+<function_name> ::= <identifier>
+
+<function_args> ::= <identifier> <rest_function_args>
+
+<rest_function_args> ::= "," <identifier> <rest_function_args> | "λ"
+
+<function_body> ::= <expression>
+
+
+<expression> ::= <term> <rest_expression>
+<expression_rest> ::= "+" <term> <expression_rest>
+		    | "-" <term> <expression_rest>
+		    | "λ"
+
+<term> ::= <factor> <rest_term>
+<rest_term> ::= "*" <factor> <rest_term>
+		| "/" <factor> <rest_term>
+		| "λ"
+
+
+<factor> ::= "(" <expression> ")"
+           | <number>
+
+
+
+<identifier>
+
+

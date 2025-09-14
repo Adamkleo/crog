@@ -1,21 +1,22 @@
 #include <vector>
+#include <string>
 #include "token.h"
 #include "lexer.h"
+#include "parser.h"
 
 int main(int argc, char const *argv[])
 {
-    std::string input = "f(x) = sin(2) + x^2 * 3!";
+    std::string input = "1 - 2 * 3 + 4 / 5";
 
     Lexer lexer(input);
-    std::string line;
-    int lineNumber = 1;
-    while (std::getline(input, line)) {
-	if (!line.empty() && line.find_first_not_of(" \t") != std::string::npos) {
-	    std::vector<Token> tokens = lexer.tokenize(line);
-	}
-    }
-    
-    
-    
+    std::vector<Token> tokens = lexer.tokenize();
+    for (auto& token : tokens) {
+	token.print();
+    } 
+    Parser parser(tokens);
+    std::unique_ptr<ASTNode> ast = parser.parse_expression();
+    ast->print(); 
+
+
     return 0;
 }

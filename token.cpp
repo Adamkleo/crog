@@ -1,4 +1,7 @@
+// token.cpp
+
 #include "token.h"
+
 
 std::string Token::to_string(TokenType t) {
     switch (t) {
@@ -26,6 +29,7 @@ std::string Token::to_string(TokenType t) {
     }
 }
 
+// Constructor takes a the type of the token, the string literal (no matter the type), and the value of the token in its original datatype
 Token::Token(TokenType t, std::string l, TokenValue v): type(t), lexeme(l), value(v) {};
 
 TokenType Token::get_type() {

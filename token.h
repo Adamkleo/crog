@@ -1,3 +1,11 @@
+/**
+ * @file token.h
+ * @brief Token class, token types, and token related helpers 
+ * @author AdamKleo
+ * @date 2025-09-14
+ * @version 1.0
+ */
+
 #pragma once
 
 #include <string>
@@ -51,14 +59,14 @@ const std::unordered_map<std::string, TokenType> symbol_map = {
     {"abs", TokenType::ABS}
 };
 
-
-using TokenValue = std::variant<int, float, char, std::string>;
+// All numbers are treated as doubles
+using TokenValue = std::variant<double, char, std::string>;
 
 
 
 class Token {
 private:
-    TokenType type;
+    TokenType type; 
     std::string lexeme;
     TokenValue value;
 

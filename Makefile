@@ -2,7 +2,7 @@ CXX = clang++
 CXXFLAGS = -Wall -Wextra -std=c++17
 
 TARGET = main
-SOURCES = main.cpp token.cpp lexer.cpp
+SOURCES = main.cpp token.cpp lexer.cpp ast.cpp parser.cpp
 
 
 $(TARGET): $(SOURCES) 

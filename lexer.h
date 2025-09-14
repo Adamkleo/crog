@@ -1,3 +1,13 @@
+/**
+ * @file lexer.h
+ * @brief Lexer class  
+ * @author Adam Kaawach
+ * @date 2025-09-14
+ * @version 1.0
+ */
+
+#pragma once
+
 #include <string>
 #include <cctype>
 #include "token.h"
@@ -31,7 +41,7 @@ public:
     Lexer(std::string i);
 
     // Tokenize entire input stream, return vector of tokens
-    std::vector<Token> tokenize(const std::string& input);
+    std::vector<Token> tokenize();
 };
 
 
