@@ -1,5 +1,5 @@
 /**
- * @file token.h
+ * @file token.hpp
  * @brief Token class, token types, and token related helpers 
  * @author AdamKleo
  * @date 2025-09-14

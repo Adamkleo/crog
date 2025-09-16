@@ -1,6 +1,6 @@
 // token.cpp
 
-#include "token.h"
+#include "token.hpp"
 
 
 std::string Token::to_string(TokenType t) {

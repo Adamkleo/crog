@@ -1,6 +1,3 @@
-<expression> ::"=" <term> | <expression> ""+"" <term>
-<term> ::"=" <factor> | <term> ""*"" <factor>
-<factor> ::"=" ""("" <expression> "")"" | <number>
 
 // Entry point to program concsisting of one or more sentences
 <program> ::"=" <sentence> <rest_sentence>
@@ -29,17 +26,20 @@
 		    | "-" <term> <expression_rest>
 		    | "λ"
 
-<term> ::= <factor> <rest_term>
-<rest_term> ::= "*" <factor> <rest_term>
-		| "/" <factor> <rest_term>
+<term> ::= <unary> <rest_term>
+<rest_term> ::= "*" <unary> <rest_term>
+		| "/" <unary> <rest_term>
 		| "λ"
+
+<unary> ::= "-" <power> | <power>
+
+<power> ::= <factor> "^" <power> | <factor>
 
 
 <factor> ::= "(" <expression> ")"
            | <number>
+	   | <identifier>
 
-
-
-<identifier>
-
+<number> ::= "0" | ... | "1"
+<identifier> ::= string
 

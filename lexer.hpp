@@ -1,5 +1,5 @@
 /**
- * @file lexer.h
+ * @file lexer.hpp
  * @brief Lexer class  
  * @author Adam Kaawach
  * @date 2025-09-14
@@ -10,7 +10,7 @@
 
 #include <string>
 #include <cctype>
-#include "token.h"
+#include "token.hpp"
 
 class Lexer {
 private:
@@ -27,7 +27,7 @@ private:
     // Tokenize alpha string in the input stream
     Token alpha();
     
-    // Tokenize symbol in the input stream, symbols defined in symbol table (token.h)
+    // Tokenize symbol in the input stream, symbols defined in symbol table (token.hpp)
     Token symbol();
 
     // Helper to check if a character is a character is a symbol (single-char symbols only)
