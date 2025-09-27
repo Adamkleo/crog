@@ -1,0 +1,3 @@
+/Users/adamkaawach/Programming/crog/build/CMakeFiles/crog.dir
+/Users/adamkaawach/Programming/crog/build/CMakeFiles/edit_cache.dir
+/Users/adamkaawach/Programming/crog/build/CMakeFiles/rebuild_cache.dir
