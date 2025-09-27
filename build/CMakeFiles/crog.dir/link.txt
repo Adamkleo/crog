@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/crog.dir/main.cpp.o CMakeFiles/crog.dir/lexer.cpp.o CMakeFiles/crog.dir/token.cpp.o CMakeFiles/crog.dir/ast.cpp.o CMakeFiles/crog.dir/parser.cpp.o CMakeFiles/crog.dir/exception.cpp.o -o crog
