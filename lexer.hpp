@@ -9,7 +9,7 @@
 #pragma once
 
 #include <string>
-#include <cctype>
+#include <vector>
 #include "token.hpp"
 
 class Lexer {

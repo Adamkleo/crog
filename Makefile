@@ -1,5 +1,5 @@
 CXX = clang++
-CXXFLAGS = -Wall -Wextra -std=c++17
+CXXFLAGS = -Wall -Wextra -std=c++20
 
 TARGET = main
 SOURCES = main.cpp token.cpp lexer.cpp ast.cpp parser.cpp exception.cpp

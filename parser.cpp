@@ -1,8 +1,5 @@
 #include "parser.hpp"
-#include "ast.hpp"
-#include "token.hpp"
 #include "exception.cpp"
-#include <memory>
 
 bool Parser::current_type_is(TokenType type) {
     return tokens[currentIndex].get_type() == type;

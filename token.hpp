@@ -12,7 +12,7 @@
 #include <iostream>
 #include <cctype>
 #include <unordered_map>
-
+#include <variant>
 
 enum class TokenType {
     _EOF,
